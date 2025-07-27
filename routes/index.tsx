@@ -79,7 +79,7 @@ function Hero() {
         Kedar M. Dinde
       </div>
       <div class="text-6xl mt-2" style="color: var(--color-text-muted)">
-        I build scalable and efficient web applications.
+        Engineering beautiful Uls and scalable backends with modern web tech
       </div>
       <div class="mt-4 text-lg w-6/12" style="color: var(--color-text-muted)">
         I'm a software engineer with a passion for creating innovative
