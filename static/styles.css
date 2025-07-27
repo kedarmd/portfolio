@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: #1e1e2e; /* Base */
-  --color-surface: #313244; /* Surface0 */
-  --color-text: #cdd6f4; /* Text */
-  --color-text-muted: #a6adc8; /* Subtext */
-  --color-accent: #fab387; /* Peach */
-  --color-accent-hover: #f9e2af; /* Yellow */
-  --color-border: #585b70; /* Overlay1 */
+  --color-bg: #1a1b26; /* Background */
+  --color-surface: #24283b; /* Darker surface */
+  --color-text: #c0caf5; /* Foreground text */
+  --color-text-muted: #a9b1d6; /* Muted text */
+  --color-accent: #7aa2f7; /* Blue (Primary accent) */
+  --color-accent-hover: #bb9af7; /* Purple (Hover accent) */
+  --color-border: #3b4261; /* Border */
   --font-body: "Segoe UI", sans-serif;
 }
 
@@ -55,7 +55,7 @@ p {
 
 button {
   background-color: var(--color-accent);
-  color: #000;
+  color: #1a1b26;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.25rem;
@@ -66,6 +66,7 @@ button {
 
 button:hover {
   background-color: var(--color-accent-hover);
+  color: #1a1b26;
 }
 
 .container {
