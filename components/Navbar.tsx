@@ -15,12 +15,12 @@ export default function Navbar() {
         color: "var(--color-text)",
       }}
     >
-      <div
-        class="text-xl font-bold"
-        style={{ color: "var(--color-accent)" }}
+      <a
+        class="text-xl font-bold text-accent"
+        href="/"
       >
         KMD
-      </div>
+      </a>
       <ul class="flex space-x-6">
         {PAGES.map((page) => (
           <li key={page.name}>
