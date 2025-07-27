@@ -11,7 +11,7 @@ const CONTACTS = [
   },
   {
     name: "LinkedIn",
-    value: "https://www.linkedin.com/in/kedarmd/",
+    value: "https://in.linkedin.com/in/kedar-dinde-a540a653",
     icon: "LinkedIn",
   },
 ];
