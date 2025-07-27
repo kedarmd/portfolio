@@ -88,6 +88,9 @@ function Hero() {
         <div>
           I also enjoy developing tools and libraries for Neovim and Wezterm.
         </div>
+        <div>
+          Yes, I use Neovim, btw :)
+        </div>
       </div>
     </div>
   );

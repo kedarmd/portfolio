@@ -1,5 +1,5 @@
 const PAGES = [
-  { name: "Home", path: "/" },
+  { name: "About", path: "/" },
   { name: "Experience", path: "/experience" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
