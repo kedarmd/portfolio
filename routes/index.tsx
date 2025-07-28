@@ -78,7 +78,7 @@ function Hero() {
       <div class="text-8xl font-bold mt-2">
         Kedar M. Dinde
       </div>
-      <div class="text-6xl mt-2" style="color: var(--color-text-muted)">
+      <div class="text-6xl mt-2 w-8/12" style="color: var(--color-text-muted)">
         Engineering beautiful Uls and scalable backends with modern web tech
       </div>
       <div class="mt-4 text-lg w-6/12" style="color: var(--color-text-muted)">
