@@ -26,6 +26,7 @@ export default function Navbar() {
           <li key={page.name}>
             <a
               href={page.path}
+              preload="hover"
               class="p-2 rounded transition-colors duration-200"
             >
               {page.name}
