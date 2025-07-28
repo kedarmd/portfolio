@@ -69,41 +69,55 @@ const CONTACTS = [
   },
 ];
 
+function HeroHeader() {
+  return (
+    <div className="flex gap-14">
+      <div className="flex flex-col gap-2 justify-end">
+        <div className="text-2xl" style={{ color: "var(--color-accent)" }}>
+          Hi, my name is
+        </div>
+        <div className="text-8xl font-bold">Kedar M. Dinde</div>
+      </div>
+      <img
+        src="/avatar.jpg"
+        alt="avatar"
+        className="rounded-full h-40 w-40 object-cover aspect-square"
+      />
+    </div>
+  );
+}
+
+function HeroIntro() {
+  return (
+    <div
+      className="text-6xl w-10/12"
+      style={{ color: "var(--color-text-muted)" }}
+    >
+      Engineering beautiful UIs and scalable backends with modern web tech
+    </div>
+  );
+}
+
+function HeroDescription() {
+  return (
+    <div className="flex-col gap-4 w-6/12">
+      I'm a software engineer with a passion for creating innovative solutions.
+      I specialize in full-stack development, focusing on performance and user
+      experience.
+      <div>
+        I also enjoy developing tools and plugins for Neovim and Wezterm.
+      </div>
+      <div>Yes, I use Neovim, btw :)</div>
+    </div>
+  );
+}
+
 function Hero() {
   return (
-    <div className="flex flex-col justify-center items-start gap-4 px-6 py-8 ml-24">
-      <div className="flex items-stretch gap-14 mb-4">
-        <div className="flex flex-col items-start justify-between">
-          <div className="text-accent mt-14">
-            Hi, my name is
-          </div>
-          <div className="text-8xl font-bold mt-2">Kedar M. Dinde</div>
-        </div>
-        <img
-          src="/avatar.jpg"
-          alt="avatar"
-          className="aspect-square rounded-full h-40 w-40 mt-3 ml-4 object-cover"
-        />
-      </div>
-
-      <div
-        className="text-6xl mt-2 w-8/12"
-        style={{ color: "var(--color-text-muted)" }}
-      >
-        Engineering beautiful UIs and scalable backends with modern web tech
-      </div>
-      <div
-        className="mt-4 text-lg w-6/12"
-        style={{ color: "var(--color-text-muted)" }}
-      >
-        I'm a software engineer with a passion for creating innovative
-        solutions. I specialize in full-stack development, focusing on
-        performance and user experience.
-        <div>
-          I also enjoy developing tools and libraries for Neovim and Wezterm.
-        </div>
-        <div>Yes, I use Neovim, btw :)</div>
-      </div>
+    <div className="flex-1 flex flex-col items-start justify-center gap-6 p-6">
+      <HeroHeader />
+      <HeroIntro />
+      <HeroDescription />
     </div>
   );
 }
