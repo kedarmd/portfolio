@@ -1,16 +1,21 @@
-# Fresh project
+# Portfolio
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+This project has been migrated from Deno Fresh to a Node.js-based [TanStack Start](https://start.tanstack.com/) application.
 
-### Usage
+## Setup & Usage
 
-Make sure to install Deno: https://deno.land/manual/getting_started/installation
+Make sure you have [Node.js](https://nodejs.org/) installed (version 18 or above).
 
-Then start the project:
+Install dependencies:
 
 ```
-deno task start
+npm install
 ```
 
-This will watch the project directory and restart as necessary.
+Start the development server:
+
+```
+npm run dev
+```
+
+This will start your app and watch for file changes.
