@@ -4,9 +4,6 @@ import viteReact from "@vitejs/plugin-react";
 import { nitro } from 'nitro/vite';
 
 export default defineConfig({
-  server: {
-    port: 3000,
-  },
   resolve: {
     tsconfigPaths: true,
   },
@@ -15,8 +12,6 @@ export default defineConfig({
       srcDirectory: "src",
     }),
     viteReact(),
-    nitro({
-      preset: 'deno-deploy',
-    }),
+    nitro(), // Let Deno Deploy handle the preset automatically!
   ],
 });
