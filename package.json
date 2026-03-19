@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "npm run css && vite dev",
+    "build": "npm run css && vite build",
+    "preview": "vite preview",
+    "css": "npx @tailwindcss/cli -i src/styles.css -o public/styles.css --minify"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.167.5",
+    "@tanstack/react-router-devtools": "^1.166.9",
+    "@tanstack/react-start": "^1.166.17",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "@types/node": "^22.5.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.7.2",
+    "vite": "^8.0.0"
+  }
+}

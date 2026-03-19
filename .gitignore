@@ -5,7 +5,13 @@
 .env.production.local
 .env.local
 
-# Fresh build directory
-_fresh/
-# npm dependencies
+# Dependencies
 node_modules/
+
+# Build outputs
+dist
+.output
+.tanstack
+
+# Auto-generated route tree
+.routeTree.gen.ts
