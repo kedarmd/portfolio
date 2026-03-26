@@ -1,3 +1,6 @@
+import { useSignal } from "@preact/signals";
+import { useEffect } from "preact/hooks";
+
 const PAGES = [
   { name: "About", path: "/" },
   { name: "Experience", path: "/experience" },
@@ -26,6 +29,21 @@ function prefetch(href: string) {
 }
 
 export default function Navbar() {
+  const currentPath = useSignal<string>("/");
+
+  useEffect(() => {
+    const updatePath = () => {
+      currentPath.value = globalThis.location?.pathname ?? "/";
+    };
+
+    updatePath();
+    globalThis.addEventListener?.("popstate", updatePath);
+
+    return () => {
+      globalThis.removeEventListener?.("popstate", updatePath);
+    };
+  }, [currentPath]);
+
   return (
     <nav
       className="px-6 py-4 flex justify-between items-center border-b"
@@ -39,19 +57,25 @@ export default function Navbar() {
         KMD
       </a>
       <ul className="flex space-x-6">
-        {PAGES.map((page) => (
+        {PAGES.map((page) => {
+          const isActive = currentPath.value === page.path;
+
+          return (
           <li key={page.name}>
             <a
               href={page.path}
-              className="p-2 rounded transition-colors duration-200 hover:opacity-80"
-              style={{ color: "var(--color-text)" }}
+              className={`p-2 rounded transition-colors duration-200 hover:opacity-80 ${
+                isActive ? "text-[color:var(--color-accent)] font-semibold" : ""
+              }`}
+              style={!isActive ? { color: "var(--color-text)" } : undefined}
               onPointerEnter={() => prefetch(page.path)}
               onFocus={() => prefetch(page.path)}
             >
               {page.name}
             </a>
           </li>
-        ))}
+          );
+        })}
       </ul>
     </nav>
   );
