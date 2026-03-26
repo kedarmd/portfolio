@@ -4,6 +4,27 @@ const PAGES = [
   { name: "Blog", path: "/blog" },
 ];
 
+const prefetched = new Set<string>();
+
+function prefetch(href: string) {
+  if (!href || prefetched.has(href)) {
+    return;
+  }
+
+  prefetched.add(href);
+
+  const run = () => {
+    fetch(href, { headers: { "x-prefetch": "1" } }).catch(() => {});
+  };
+
+  if ("requestIdleCallback" in globalThis) {
+    (globalThis as { requestIdleCallback: (cb: () => void) => void })
+      .requestIdleCallback(run);
+  } else {
+    run();
+  }
+}
+
 export default function Navbar() {
   return (
     <nav
@@ -24,6 +45,8 @@ export default function Navbar() {
               href={page.path}
               className="p-2 rounded transition-colors duration-200 hover:opacity-80"
               style={{ color: "var(--color-text)" }}
+              onPointerEnter={() => prefetch(page.path)}
+              onFocus={() => prefetch(page.path)}
             >
               {page.name}
             </a>
