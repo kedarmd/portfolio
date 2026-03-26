@@ -1,6 +1,10 @@
-import { Link } from "@tanstack/react-router";
+import type { ComponentChildren } from "preact";
 
-export function NotFound({ children }: { children?: React.ReactNode }) {
+type NotFoundProps = {
+  children?: ComponentChildren;
+};
+
+export function NotFound({ children }: NotFoundProps) {
   return (
     <div className="flex-1 flex items-center justify-center p-6">
       <div className="max-w-screen-md mx-auto flex flex-col items-center justify-center">
@@ -15,19 +19,29 @@ export function NotFound({ children }: { children?: React.ReactNode }) {
         </p>
         <div className="flex gap-4">
           <button
-            onClick={() => window.history.back()}
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                window.history.back();
+              }
+            }}
             className="px-4 py-2 rounded"
-            style={{ backgroundColor: "var(--color-surface)", color: "var(--color-text)" }}
+            style={{
+              backgroundColor: "var(--color-surface)",
+              color: "var(--color-text)",
+            }}
           >
             Go back
           </button>
-          <Link
-            to="/"
+          <a
+            href="/"
             className="px-4 py-2 rounded"
-            style={{ backgroundColor: "var(--color-accent)", color: "var(--color-bg)" }}
+            style={{
+              backgroundColor: "var(--color-accent)",
+              color: "var(--color-bg)",
+            }}
           >
             Home
-          </Link>
+          </a>
         </div>
       </div>
     </div>

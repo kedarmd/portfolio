@@ -1,5 +1,3 @@
-import { Link } from "@tanstack/react-router";
-
 const PAGES = [
   { name: "About", path: "/" },
   { name: "Experience", path: "/experience" },
@@ -16,19 +14,19 @@ export default function Navbar() {
         color: "var(--color-text)",
       }}
     >
-      <Link to="/" className="text-xl font-bold">
+      <a href="/" className="text-xl font-bold">
         KMD
-      </Link>
+      </a>
       <ul className="flex space-x-6">
         {PAGES.map((page) => (
           <li key={page.name}>
-            <Link
-              to={page.path}
+            <a
+              href={page.path}
               className="p-2 rounded transition-colors duration-200 hover:opacity-80"
               style={{ color: "var(--color-text)" }}
             >
               {page.name}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

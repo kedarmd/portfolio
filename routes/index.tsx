@@ -1,8 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-export const Route = createFileRoute("/")({
-  component: Home,
-});
+import { define } from "../utils.ts";
 
 function GitHubIcon() {
   return (
@@ -97,8 +93,8 @@ function HeroHeader() {
 function HeroIntro() {
   return (
     <p
-      className="text-3xl sm:text-5xl lg:text-6xl leading-tight max-w-3xl"
-      style={{ color: "var(--color-text-muted)", lineHeight: 1.15 }}
+      className="text-3xl sm:text-5xl lg:text-4xl leading-tight max-w-3xl"
+      style={{ color: "var(--color-text-muted)" }}
     >
       Engineering beautiful UIs and scalable backends with modern web tech
     </p>
@@ -155,7 +151,7 @@ function Contacts() {
   );
 }
 
-function Home() {
+export default define.page(function HomeRoute() {
   return (
     <div className="flex-1 flex flex-col lg:flex-row lg:items-stretch lg:gap-6">
       <div className="order-2 lg:order-1 flex lg:w-64 lg:flex-col lg:justify-end">
@@ -166,6 +162,4 @@ function Home() {
       </div>
     </div>
   );
-}
-
-export default Home;
+});

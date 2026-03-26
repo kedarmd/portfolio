@@ -1,21 +1,25 @@
 # Portfolio
 
-This project has been migrated from Deno Fresh to a Node.js-based [TanStack Start](https://start.tanstack.com/) application.
+This project runs on Deno using the [Fresh](https://fresh.deno.dev/) framework with Tailwind CSS.
 
 ## Setup & Usage
 
-Make sure you have [Node.js](https://nodejs.org/) installed (version 18 or above).
-
-Install dependencies:
-
-```
-npm install
-```
+Make sure you have [Deno](https://deno.com/runtime) installed.
 
 Start the development server:
 
 ```
-npm run dev
+deno task dev
 ```
 
-This will start your app and watch for file changes.
+Build the production bundle:
+
+```
+deno task build
+```
+
+Start the production server:
+
+```
+deno task start
+```

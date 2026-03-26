@@ -1,8 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-export const Route = createFileRoute("/experience")({
-  component: Experience,
-});
+import { define } from "../utils.ts";
 
 const EXPERIENCES = [
   {
@@ -32,7 +28,7 @@ const EXPERIENCES = [
   },
 ];
 
-function Experience() {
+export default define.page(function ExperienceRoute() {
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold">Experience</h1>
@@ -62,6 +58,4 @@ function Experience() {
       </div>
     </div>
   );
-}
-
-export default Experience;
+});
