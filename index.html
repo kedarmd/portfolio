@@ -1,112 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kedar Mohan Dinde | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --text-main: #171717;
-            --text-muted: #737373;
-            --bg: #fafafa;
-            --border: #e5e5e5;
-        }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-        .container {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 6rem 2rem;
-        }
-        header {
-            margin-bottom: 5rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            margin: 0 0 0.5rem 0;
-        }
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin: 0 0 1.5rem 0;
-            font-weight: 400;
-        }
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-        }
-        .contact-links a, .contact-links span {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        .contact-links a:hover {
-            color: var(--text-main);
-        }
-        section {
-            margin-bottom: 4rem;
-        }
-        h2 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            font-weight: 500;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 0.75rem;
-            margin-bottom: 2.5rem;
-        }
-        p.summary {
-            font-size: 1.05rem;
-            color: var(--text-main);
-            font-weight: 300;
-        }
-        .grid-list {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
-        }
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.75rem;
-            flex-wrap: wrap;
-        }
-        .item-title {
-            font-weight: 500;
-            font-size: 1.1rem;
-            color: var(--text-main);
-        }
-        .item-subtitle {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-        .item-date {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-variant-numeric: tabular-nums;
-        }
-        ul {
-            margin: 0;
-            padding-left: 1.25rem;
-            color: var(--text-main);
-            font-weight: 300;
-        }
-        li {
-            margin-bottom: 0.5rem;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kedar Dinde | Senior Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#09090b;
+--surface:#18181b;
+--text:#fafafa;
+--muted:#a1a1aa;
+--border:#27272a;
+--accent:#60a5fa;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:Inter,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.7;
+}
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background:
+linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+background-size:40px 40px;
+}
+.container{width:min(1200px,92%);margin:auto}
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(9,9,11,.8);
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--border);
+z-index:100;
+}
+.nav{
+height:72px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{font-weight:800;letter-spacing:.1rem}
+.links a{
+color:var(--muted);
+text-decoration:none;
+margin-left:20px;
+}
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+}
+.hero h1{
+font-size:clamp(3rem,8vw,6rem);
+line-height:1.05;
+margin:12px 0 20px;
+}
+.hero p{
+max-width:750px;
+font-size:1.15rem;
+color:var(--muted);
+}
+.btns{
+display:flex;
+gap:12px;
+margin-top:28px;
+flex-wrap:wrap;
+}
+.btn{
+padding:14px 22px;
+border-radius:12px;
+text-decoration:none;
+}
+.primary{background:var(--accent);color:white}
+.secondary{border:1px solid var(--border);color:white}
+section{padding:100px 0}
+h2{font-size:2.7rem;margin-bottom:24px}
+.grid{display:grid;gap:20px}
+.skills{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.projects{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card,.project,.contact-card{
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:20px;
+padding:24px;
+}
+p{color:var(--muted)}
+.timeline .item{
+border-left:2px solid var(--accent);
+padding-left:20px;
+margin-bottom:24px;
+}
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:14px;
+}
+.tag{
+border:1px solid var(--border);
+padding:4px 10px;
+border-radius:999px;
+font-size:12px;
+}
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+.contact-card a{
+color:var(--accent);
+text-decoration:none;
+}
+footer{
+padding:60px 0;
+text-align:center;
+color:var(--muted);
+}
+@media(max-width:768px){
+.links{display:none}
+.projects{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container nav">
+<div class="logo">KMD.</div>
+<div class="links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<a href="./Kedar_Mohan_Dinde_Resume.pdf" download>Resume</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div style="color:#60a5fa;text-transform:uppercase;letter-spacing:.15em">
+Senior Software Engineer III
+</div>
+
+<h1>
+Designing scalable systems,
+distributed architectures
+and AI-powered products.
+</h1>
+
+<p>
+6+ years of experience building enterprise software with Node.js,
+TypeScript, React, Kafka, Redis, Temporal, PostgreSQL,
+Elasticsearch and modern GenAI technologies.
+</p>
+
+<div class="btns">
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="./Kedar_Mohan_Dinde_Resume.pdf" download class="btn secondary">
+⬇ Download Resume
+</a>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<h2>About</h2>
+<p>
+Results-driven Senior Software Engineer with extensive experience architecting
+distributed systems, event-driven platforms, search engines, AI-powered workflows,
+and enterprise applications. Passionate about building software that delivers
+measurable business value while maintaining engineering excellence.
+</p>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+<h2>Technical Expertise</h2>
+<div class="grid skills">
+<div class="card"><h3>Backend</h3><p>Node.js, TypeScript, Deno, Express</p></div>
+<div class="card"><h3>Databases</h3><p>PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch</p></div>
+<div class="card"><h3>Distributed Systems</h3><p>Kafka, Temporal, Pub/Sub, Microservices</p></div>
+<div class="card"><h3>AI & Automation</h3><p>GenAI, LLMs, Workflow Automation</p></div>
+</div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+<h2>Experience</h2>
+<div class="timeline">
+<div class="item"><h3>Zemoso Technologies</h3><p>Senior Software Engineer III (2023 - Present)</p></div>
+<div class="item"><h3>Globant</h3><p>Senior Software Engineer (2022)</p></div>
+<div class="item"><h3>Tech Prescient</h3><p>Software Engineer (2021 - 2022)</p></div>
+<div class="item"><h3>Innoplexus Consultancy Services</h3><p>Associate Software Engineer (2019 - 2021)</p></div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<h2>Major Projects</h2>
+<div class="grid projects">
+
+<div class="project">
+<h3>Asset Health Score</h3>
+<p>Architected an enterprise GenAI platform for Baker Hughes that evaluates operational health of heavy machinery. Designed backend systems, optimized relational databases and integrated LLM-powered workflows that reduced manual report generation from weeks to hours.</p>
+</div>
+
+<div class="project">
+<h3>Amplifier Security</h3>
+<p>Developed distributed services and REST APIs for an AI-powered cybersecurity platform. Implemented workflow orchestration, automated remediation flows and asynchronous processing using Temporal, Redis and Pub/Sub.</p>
+</div>
+
+<div class="project">
+<h3>Market Intelligence Platform</h3>
+<p>Built backend infrastructure for Teikametrics to process large-scale e-commerce competitor intelligence data and generate actionable growth insights using event-driven architecture.</p>
+</div>
+
+<div class="project">
+<h3>Curia Platform</h3>
+<p>Created backend APIs for matching patient profiles with oncology clinical trials, improving accessibility and discoverability of relevant medical research opportunities.</p>
+</div>
+
+<div class="project">
+<h3>ACUO Search Engine</h3>
+<p>Designed web crawlers and search infrastructure to collect, index and search clinical trial and research literature datasets using Elasticsearch.</p>
+</div>
+
+<div class="project">
+<h3>Biomarker Dashboard</h3>
+<p>Developed analytics services supporting comparison and exploration of over 70,000 biological indicators for biomedical research and disease analysis.</p>
+</div>
+
+<div class="project">
+<h3>nvim-wez-navigator</h3>
+<p>Open-source Neovim plugin enabling seamless pane navigation between Neovim and WezTerm using familiar editor keybindings.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2>Get In Touch</h2>
+
+<p>
+I'm always interested in discussing software architecture,
+distributed systems, AI-powered products, open-source software,
+and exciting engineering opportunities.
+</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Email</h3>
+<a href="mailto:dindekedar@gmail.com">dindekedar@gmail.com</a>
+</div>
+
+<div class="contact-card">
+<h3>GitHub</h3>
+<a href="https://github.com/kedarmd">github.com/kedarmd</a>
+</div>
+
+<div class="contact-card">
+<h3>LinkedIn</h3>
+<a href="https://www.linkedin.com/in/kedar-dinde-a540a653/">
+linkedin.com/in/kedar-dinde-a540a653
+</a>
+</div>
+
+<div class="contact-card">
+<h3>Location</h3>
+<p>Sangli, Maharashtra, India</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+<p>Kedar Dinde • Senior Software Engineer • github.com/kedarmd</p>
+</footer>
+
+</body>
+</html>            margin-bottom: 0.5rem;
         }
         li strong {
             font-weight: 500;
