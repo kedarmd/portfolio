@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedar Mohan Dinde | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #171717;
+            --text-muted: #737373;
+            --bg: #fafafa;
+            --border: #e5e5e5;
+        }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+        header {
+            margin-bottom: 5rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            margin: 0 0 0.5rem 0;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin: 0 0 1.5rem 0;
+            font-weight: 400;
+        }
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+        .contact-links a, .contact-links span {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .contact-links a:hover {
+            color: var(--text-main);
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 500;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+        p.summary {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            font-weight: 300;
+        }
+        .grid-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .item-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+        .item-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .item-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
+        }
+        ul {
+            margin: 0;
+            padding-left: 1.25rem;
+            color: var(--text-main);
+            font-weight: 300;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        li strong {
+            font-weight: 500;
+        }
+        .skills-group {
+            margin-bottom: 1.5rem;
+        }
+        .skills-category {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+        .skills-list {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 600px) {
+            .item-header {
+                flex-direction: column;
+            }
+            .item-date {
+                margin-top: 0.25rem;
+            }
+            .container {
+                padding: 4rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kedar Mohan Dinde</h1>
+            <p class="subtitle">Senior Software Engineer III</p>
+            <div class="contact-links">
+                <a href="mailto:dindekedar@gmail.com">dindekedar@gmail.com</a>
+                <span>+91 8149264767</span>
+                <span>Sangli, Maharashtra</span>
+                <a href="https://linkedin.com/in/kedar-dinde-a540a653" target="_blank">LinkedIn</a>
+                <a href="https://github.com/kedarmd" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Summary</h2>
+            <p class="summary">
+                Results-driven Senior Software Engineer with over <span id="dynamic-years">6</span>+ years of expertise in full-stack development, specializing in scalable backend architectures, distributed systems, and modern database design. Proven track record of designing robust database schemas and high-performance microservices using Node.js, TypeScript, React, and Python. Expert in orchestrating complex data pipelines with Kafka, Redis, and Temporal, and integrating state-of-the-art GenAI / LLM workflows to automate enterprise-scale industrial processes. Demonstrated technical leadership in guiding engineering teams, architecting zero-to-one solutions, and translating complex client requirements into resilient, high-impact production software.
+            </p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="grid-list">
+                <div class="job-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Senior Software Engineer III</div>
+                            <div class="item-subtitle">Zemoso Technologies · Hyderabad (Remote)</div>
+                        </div>
+                        <div class="item-date">Jan 2023 – Present</div>
+                    </div>
+                    <ul>
+                        <li><strong>Project Lead & Architect — Asset Health Score (Client: Baker Hughes):</strong> Appointed to architect the complete end-to-end software architecture and optimize relational database schemas for a high-priority enterprise GenAI application designed to evaluate the operational health of heavy machinery on oil rigs.</li>
+                        <li>Functioned as the technical team lead for a cross-functional engineering team to build and deploy automated LLM workflows and reporting pipelines, reducing the operational manual effort of generating machine risk summaries from weeks to hours.</li>
+                        <li>Spearheaded the integration of modern LLM tools to process raw unstructured and operational machinery data, delivering highly accurate, automated risk reports and prescriptive health scores.</li>
+                        <li><strong>Senior Engineer — Amplifier Security (Client: Amplifier Security):</strong> Designed and implemented core REST APIs and distributed microservices for an AI-powered cybersecurity human risk management platform acting as an organizational control plane.</li>
+                        <li>Configured complex asynchronous workflows, user-centric security guidance loops, and automated remediation pathways utilizing Temporal, Redis, Pub/Sub, and MySQL.</li>
+                        <li>Coordinated closely with frontend engineers to seamlessly integrate data-dense UI elements with high-performance, testable backend REST endpoints.</li>
+                    </ul>
+                </div>
+
+                <div class="job-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Senior Software Engineer</div>
+                            <div class="item-subtitle">Globant · Pune</div>
+                        </div>
+                        <div class="item-date">Jul 2022 – Dec 2022</div>
+                    </div>
+                    <ul>
+                        <li>Engineered highly resilient, testable codebases for complex software systems using Node.js and TypeScript, ensuring alignment with strict enterprise quality standards.</li>
+                        <li>Optimized high-throughput search operations and transactional data queries across distributed data stores using Elasticsearch and PostgreSQL to improve analytical portal response times.</li>
+                    </ul>
+                </div>
+
+                <div class="job-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Software Engineer</div>
+                            <div class="item-subtitle">Tech Prescient · Pune</div>
+                        </div>
+                        <div class="item-date">Oct 2021 – Jul 2022</div>
+                    </div>
+                    <ul>
+                        <li><strong>Market Intelligence Platform (Client: Teikametrics):</strong> Developed robust backend infrastructure supporting a large-scale e-commerce market analysis platform handling competitive tracking data using Node.js, Express.js, and Elasticsearch.</li>
+                        <li>Streamlined real-time competitor data streams and product ranking trackers utilizing PostgreSQL, Redis, and Apache Kafka, empowering retail brands to seamlessly maximize incremental growth.</li>
+                    </ul>
+                </div>
+
+                <div class="job-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Associate Software Engineer</div>
+                            <div class="item-subtitle">Innoplexus Consultancy Services Pvt Ltd · Pune</div>
+                        </div>
+                        <div class="item-date">Sep 2019 – Oct 2021</div>
+                    </div>
+                    <ul>
+                        <li><strong>Curia Platform:</strong> Built core backend APIs handling medical profile matching and clinical oncology trial navigation for patients, leveraging Node.js, Express, Kafka, and MongoDB.</li>
+                        <li><strong>ACUO Search Engine (Client: Parexel):</strong> Designed and optimized custom web crawlers and reliable data ingestion pipelines to index, search, and bookmark extensive clinical trials, grants, and literature for Parkinson's disease using Elasticsearch.</li>
+                        <li><strong>Biomarker Dashboard (Client: Gilead):</strong> Developed high-performing data aggregation layers to facilitate comparative analysis and inter-connection models across 70k+ biological indicators for Inflammatory Bowel Disease.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-group">
+                <div class="skills-category">Languages & Frameworks</div>
+                <div class="skills-list">JavaScript, TypeScript, Node.js, Express.js, Deno, Python, React.js, Redux, Tailwind CSS</div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-category">Data Stores & Caching</div>
+                <div class="skills-list">MongoDB, PostgreSQL, MySQL, Elasticsearch, Redis</div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-category">Distributed Systems</div>
+                <div class="skills-list">Apache Kafka, Temporal, Pub/Sub, Microservices Architecture</div>
+            </div>
+            <div class="skills-group">
+                <div class="skills-category">Tools & Engineering</div>
+                <div class="skills-list">Git, GitHub, GitLab, REST API Design, Web Crawling, Unit Testing (Jest, Mocha, Chai)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="grid-list">
+                <div class="job-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Post Graduate Diploma in Advanced Computing (PG-DAC)</div>
+                            <div class="item-subtitle">Infoway Pvt. Ltd. | Grade: First Class (70.40%)</div>
+                        </div>
+                        <div class="item-date">2019</div>
+                    </div>
+                </div>
+                <div class="job-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Bachelor of Engineering (B.E.) in Electronics</div>
+                            <div class="item-subtitle">Shivaji University | Grade: First Class (62.19%)</div>
+                        </div>
+                        <div class="item-date">2016</div>
+                    </div>
+                </div>
+                <div class="job-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Certification: React - The Complete Guide</div>
+                            <div class="item-subtitle">Comprehensive coverage including Hooks, React Router, and Redux</div>
+                        </div>
+                        <div class="item-date">Verified</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Calculate dynamic years of experience starting from September 2019
+        document.addEventListener("DOMContentLoaded", function() {
+            const startDate = new Date('2019-09-01');
+            const currentDate = new Date();
+            
+            let diffInMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12;
+            diffInMonths -= startDate.getMonth();
+            diffInMonths += currentDate.getMonth();
+            
+            // Calculate total years (rounded down to the nearest whole number)
+            const totalYears = Math.floor(diffInMonths / 12);
+            
+            // Update the DOM element
+            const yearsElement = document.getElementById('dynamic-years');
+            if (yearsElement) {
+                yearsElement.textContent = totalYears;
+            }
+        });
+    </script>
+</body>
+</html>
