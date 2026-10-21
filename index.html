@@ -390,5 +390,14 @@ linkedin.com/in/kedar-dinde-a540a653
 </footer>
 
 <span id="theme-status" role="status" class="sr-only"></span>
+<script>
+const mobileMenu = document.querySelector('.mobile-menu');
+document.addEventListener('click', event => {
+  if (event.target.closest('.mobile-links a')) {
+    // Let the anchor's native navigation run, then close the disclosure.
+    window.setTimeout(() => { mobileMenu.open = false; }, 0);
+  }
+}, true);
+</script>
 </body>
 </html>
